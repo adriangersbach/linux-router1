@@ -11,10 +11,10 @@ sudo apt-get install vlan
 sudo apt-get install quagga
 ```
 
-
-
 Edit /etc/network/interfaces.d/vlans
 ```
+sudo nano /etc/network/interfaces.d/vlans
+
 # VLAN 200 Interface
 auto eth0.200
 iface eth0.200 inet manual
@@ -37,6 +37,8 @@ iface eth0.420 inet manual
 ```
 Edit /etc/network/interfaces.d/bridges
 ```
+sudo nano /etc/network/interfaces.d/bridges
+
 # br 40 Interface
 auto br40
 iface br40 inet manual
@@ -46,6 +48,8 @@ iface br40 inet manual
 
 Edit /etc/dhcpcd.conf
 ```
+sudo nano /etc/dhcpcd.conf
+
 # Static IP configuration for VLAN 200
 interface eth0.200
 static ip_address=10.200.2.5/16
