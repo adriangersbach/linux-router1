@@ -14,7 +14,8 @@ sudo apt-get install quagga
 Edit /etc/network/interfaces.d/vlans
 ```
 sudo nano /etc/network/interfaces.d/vlans
-
+```
+```
 # VLAN 200 Interface
 auto eth0.200
 iface eth0.200 inet manual
@@ -38,7 +39,8 @@ iface eth0.420 inet manual
 Edit /etc/network/interfaces.d/bridges
 ```
 sudo nano /etc/network/interfaces.d/bridges
-
+```
+```
 # br 40 Interface
 auto br40
 iface br40 inet manual
@@ -59,6 +61,11 @@ static routers=10.200.2.1
 interface br40
 static ip_address=10.40.2.5/16
 static routers=10.40.2.1
+```
+```
+brctl show
+
+sudo service networking restart
 ```
 
 Edit /etc/quagga/daemons
